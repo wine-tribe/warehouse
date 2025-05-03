@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <include file="initial_table_v1.01.xml" relativeToChangelogFile="true"/>
+    <include file="create_users_v1.01.xml" relativeToChangelogFile="true"/>
+
+    <changeSet id="insert-warehouse-group-data" author="master">
+        <sqlFile path="scripts/insert_warehouse_group.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="insert-warehouse-data" author="master">
+        <sqlFile path="scripts/insert_warehouse.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="insert-order-data" author="master">
+        <sqlFile path="scripts/insert_order.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+</databaseChangeLog>
