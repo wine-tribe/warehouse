@@ -28,7 +28,7 @@ spring:
     enabled: true
     change-log: classpath:db/database_ms_warehouse-changelog.xml
     default-schema: ms_warehouse
-    drop-first: true  # Добавлено, чтобы сначала дропнуть все таблицы перед применением миграций
+    drop-first: false  # Добавлено, чтобы сначала дропнуть все таблицы перед применением миграций
 
 logging:
   level:
